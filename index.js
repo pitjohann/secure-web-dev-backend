@@ -15,9 +15,9 @@ app.use(bodyParser.json());
 
 // Protect all /locations route with JWT Authentication
 app.use(
-  "/locations",
-  passport.authenticate("jwt", { session: false }),
-  locationsController
+    "/locations",
+    passport.authenticate("jwt", { session: false }),
+    locationsController
 );
 app.use("/users", usersController);
 
@@ -28,7 +28,7 @@ async function main() {
   console.log("Connected to Mongo Database");
   app.listen(port, () => {
     console.log(
-      `API listening on port ${port}, visit http://localhost:${port}/`
+        `API listening on port ${port}, visit http://localhost:${port}/`
     );
   });
 }

@@ -1,0 +1,6 @@
+node_modules
+npm-debug.log
+Dockerfile
+.dockerfile
+lieux-de-tournage-a-paris.json
+.env

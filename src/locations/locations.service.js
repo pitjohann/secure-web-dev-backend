@@ -16,7 +16,7 @@ async function createOne(locationData) {
  * @returns {Query<Array<HydratedDocument<unknown, {}, {}>>, Document<unknown, any, unknown> & unknown extends {_id?: infer U} ? IfAny<U, {_id: Types.ObjectId}, Required<{_id: U}>> : {_id: Types.ObjectId} & {}, {}, unknown> & {}}
  */
 function findAll(limit = 20, offset = 0) {
-  return Location.find().limit(limit).skip(offset);
+  return Location.find().limit(limit).skip(offset).sort({_id:-1});
 }
 
 async function findOne(id) {
